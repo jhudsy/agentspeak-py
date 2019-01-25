@@ -23,7 +23,8 @@ def main():
         if arg == 'maspy':
             try:
                 maspy = argv.pop(0)
-                maspy = os.path.abspath(os.path.join(os.path.dirname(__file__), maspy))
+                #maspy = os.path.abspath(os.path.join(os.path.dirname(__file__), maspy))
+                maspy = os.path.abspath(os.path.join(os.getcwd(), maspy))
             except:
                 print('esperado um argumento para maspy')
                 sys.exit(1)
